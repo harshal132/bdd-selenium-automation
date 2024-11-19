@@ -1,0 +1,24 @@
+package runners;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import org.junit.runner.RunWith;
+
+// features -> Provide path of directory where feature files are saved
+// glue -> package name where the step definitions are available
+// monochrome -> true/false -> not much difference
+
+// plugin -> pretty to get reports
+//    - html: html file path , junit: xml file path, json: json file path
+
+// tags -> include tags which test cases to be included
+
+@RunWith(Cucumber.class)
+@CucumberOptions(features = {"src/main/resources/features"},
+        glue = {"definitions"},
+        monochrome = false,
+        plugin = {"pretty","html:src/main/resources/reports/reports.html"},
+        tags = "@Tag1 or @SmokeTests")
+
+public class TestRunner {
+}
