@@ -2,6 +2,7 @@ package runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.runner.RunWith;
 
 // features -> Provide path of directory where feature files are saved
@@ -14,11 +15,12 @@ import org.junit.runner.RunWith;
 // tags -> include tags which test cases to be included
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = {"src/main/resources/features"},
+@CucumberOptions(features = {"src/main/resources/features/hookstest.feature"},
         glue = {"definitions"},
         // monochrome = true,
         plugin = {"pretty","html:src/main/resources/reports/reports.html"},
-        tags = "@Tag3")
+        tags = "@HooksTest")
 
-public class TestRunner {
+public class TestRunnerForHooks {
+
 }

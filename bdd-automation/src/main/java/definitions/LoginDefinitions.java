@@ -21,7 +21,7 @@ public class LoginDefinitions {
         System.out.println("Clicks on login button");
     }
 
-    @Then("User is navigated to homepage")
+    @Then("User navigated to homepage of website")
     public void userIsNavigatedToHomepage() {
         System.out.println("User is navigated to homepage");
     }

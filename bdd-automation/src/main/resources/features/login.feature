@@ -6,7 +6,7 @@ Feature: Login feature
     Given User is on login page
     When User enters valid credentials
     And Clicks on login button
-    Then User is navigated to homepage
+    Then User navigated to homepage of website
 
   @Tag2
   Scenario: As a user, I should not be able to login with invalid credentials
