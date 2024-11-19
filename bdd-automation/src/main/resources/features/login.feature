@@ -15,16 +15,18 @@ Feature: Login feature
     And Clicks on login button
     Then Error message displayed on login screen
 
-
   # If you need examples you have to use scenario outline
+  @Tag3
+  Scenario Outline: As a user, I should be able to login with valid credentials
+    Given User is on login page
+    When User enters valid <username> and <password>
+    And Clicks on login button
+    Then User is navigated to <page>
+    Then Verify number <value>
 
-#  Scenario Outline: As a user, I should be able to login with valid credentials
-#    Given User is on login page
-#    When User enters valid <username> and <password>
-#    And Clicks on login button
-#    Then User is navigated to homepage
-#
-#    Examples:
-#      | username | password |
-#      | user1 | pass1 |
-#      | user2 | pass2 |
+    Examples:
+      | username | password | page    | value |
+      | user1    | pass1    | web     | 10    |
+      | user2    | pass2    | address | 20    |
+      | user3    |          | blah    | 30    |
+      # we can use empty for null value

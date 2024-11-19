@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
         glue = {"definitions"},
         monochrome = false,
         plugin = {"pretty","html:src/main/resources/reports/reports.html"},
-        tags = "@Tag1 or @SmokeTests")
+        tags = "@Tag3")
 
 public class TestRunner {
 }
